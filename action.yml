@@ -1,4 +1,4 @@
-name: 'amplify-cli-action'
+name: 'amplify-cli-action-bb'
 description: 'This action builds and deploys your AWS Amplify project'
 inputs:
   project_dir: 
