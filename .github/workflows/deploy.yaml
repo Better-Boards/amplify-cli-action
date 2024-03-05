@@ -1,0 +1,34 @@
+name: 'Deploy Amplify CLI Action'
+on:
+  release:
+    types: [published]
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Build and deploy image
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Log in to Github Container Registry
+        uses: docker/login-action@master
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@master
+        with:
+          images: ghcr.io/${{ github.repository }}/amplify-cli-action
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@master
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
