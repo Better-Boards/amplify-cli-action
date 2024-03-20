@@ -1,7 +1,7 @@
 # amplify-cli-action
 
 [![RELEASE](https://img.shields.io/github/v/release/better-boards/amplify-cli-action?include_prereleases)](https://github.com/better-boards/amplify-cli-action/releases)
-[![View Action](https://img.shields.io/badge/view-action-blue.svg?logo=github&color=orange)](https://github.com/marketplace/actions/amplify-cli-action)
+[![View Action](https://img.shields.io/badge/view-action-blue.svg?logo=github&color=orange)](https://github.com/marketplace/actions/amplify-cli-action-bb)
 [![LICENSE](https://img.shields.io/github/license/better-boards/amplify-cli-action)](https://github.com/better-boards/amplify-cli-action/blob/master/LICENSE)
 [![ISSUES](https://img.shields.io/github/issues/better-boards/amplify-cli-action)](https://github.com/better-boards/amplify-cli-action/issues)
 
@@ -16,7 +16,7 @@
 See [CHANGELOG.md](https://github.com/Better-Boards/amplify-cli-action/blob/master/CHANGELOG.md) for an up-to-date list of changes to the project since the fork was created (from v0.4.0).
 
 ## Getting Started
-You can include the action in your workflow as `actions/amplify-cli-action@0.4.0`. Example (configuring amplify, building and deploying):
+You can include the action in your workflow as `Better-Boards/amplify-cli-action@0.4.0`. Example (configuring amplify, building and deploying):
 
 ```yaml
 name: 'Amplify Deploy'
